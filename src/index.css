@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Other styles... */
+  font-family: Jost, Inter, system-ui, J, Helvetica, Arial, sans-serif;
+  /* Increased line-height to prevent overlapping */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh; /* Fills the entire viewport height */
+  width: 100vw; /* 8.5 inches converted to vw (assuming 100vw = screen width) */
+  margin: 0 auto; /* Centers content horizontally */
+  text-align: center; /* Centers all text by default */
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 3.6em;
+  line-height: 1.2; /* Adjust as needed for spacing */
+  text-align: center;
+}
+
+.label {
+  text-align: center; /* Center text within .label */
+
+  /* Adjust width or use flexbox for internal content centering (if needed) */
+  /* width: 77vw;  */ /* Uncomment if needed */
+}
+
+.job-info {
+  padding-left: 15%;
+  line-height: 0.5;
+  font-size: larger;
+  justify-content: left; /* Intentional left alignment */
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  /* Adjust for smaller screens (optional) */
+  body {
+    width: 77.2vh; /* Example adjustment for narrower screens */
+  }
+}
+
+@media print {
+  body {
+    height: 80vh;
+    width: 100vw;
+    margin: 0; /* Remove margins for better space utilization */
+  }
 }
