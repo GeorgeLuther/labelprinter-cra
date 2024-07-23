@@ -5,8 +5,8 @@
 }
 
 body {
-  height: 100vh; /* Fills the entire viewport height */
-  width: 100vw; /* 8.5 inches converted to vw (assuming 100vw = screen width) */
+  height: 80vh; /* Fills the entire viewport height */
+  width: 80vw; /* 8.5 inches converted to vw (assuming 100vw = screen width) */
   margin: 0 auto; /* Centers content horizontally */
   text-align: center; /* Centers all text by default */
   max-width: 800px;
