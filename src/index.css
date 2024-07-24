@@ -24,7 +24,11 @@ h1 {
   /* Adjust width or use flexbox for internal content centering (if needed) */
   /* width: 77vw;  */ /* Uncomment if needed */
 }
-
+.kit-info {
+  line-height: 0.1;
+  justify-content: center; /* Intentional left alignment */
+  text-align: center;
+}
 .job-info {
   padding-left: 15%;
   line-height: 0.5;
@@ -41,9 +45,15 @@ h1 {
 }
 
 @media print {
-  body {
-    height: 80vh;
+  @page {
+    size: A4;
+    margin: 1cm;
     width: 100vw;
+  }
+  body {
+    justify-content: center;
+    height: 80vh;
+    width: 80vw;
     margin: 0; /* Remove margins for better space utilization */
   }
 }

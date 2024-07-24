@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import LotLabel from "./components/LotLabel";
+import KitLabel from "./components/KitLabel";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/lotLabel",
     element: <LotLabel />,
+  },
+  {
+    path: "/kitLabel",
+    element: <KitLabel />,
   },
 ]);
 
