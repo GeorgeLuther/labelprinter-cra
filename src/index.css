@@ -16,6 +16,7 @@ h1 {
   font-size: 3.6em;
   line-height: 1.2; /* Adjust as needed for spacing */
   text-align: center;
+  font-weight: bolder;
 }
 
 .label {
@@ -24,9 +25,13 @@ h1 {
   /* Adjust width or use flexbox for internal content centering (if needed) */
   /* width: 77vw;  */ /* Uncomment if needed */
 }
+.bold-txt {
+  font-size: 2em;
+  font-weight: bold;
+}
 .kit-info {
-  line-height: 0.1;
-  justify-content: center; /* Intentional left alignment */
+  line-height: 0.05;
+  justify-content: center;
   text-align: center;
 }
 .job-info {
