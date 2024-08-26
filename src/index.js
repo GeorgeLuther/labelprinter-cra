@@ -6,6 +6,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import LotLabel from "./components/LotLabel";
 import KitLabel from "./components/KitLabel";
+import DeviceLabel from "./components/DeviceLabel";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/kitLabel",
     element: <KitLabel />,
+  },
+  {
+    path: "/deviceLabel",
+    element: <DeviceLabel />,
   },
 ]);
 
