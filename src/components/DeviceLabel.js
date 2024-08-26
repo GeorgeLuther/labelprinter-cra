@@ -19,7 +19,7 @@ function DeviceLabel() {
   return (
     <div className="label">
       <div className="lot-info">
-        <h1 font-size="3em">{assetNumber}</h1>
+        <h1 className="asset-number">{assetNumber}</h1>
         <h3>
           Lot ID: <i>{lotId}</i>
         </h3>
