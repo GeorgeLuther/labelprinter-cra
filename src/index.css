@@ -18,10 +18,8 @@ h1 {
   text-align: center;
   font-weight: bolder;
 }
-.asset-number h1 {
-  h1 {
-    font-size: 4em;
-  }
+.asset-number {
+  font-size: 4.2em;
 }
 h2 {
   font-size: 2.8em;
