@@ -2,13 +2,17 @@
   /* Other styles... */
   font-family: Jost, Inter, system-ui, J, Helvetica, Arial, sans-serif;
   /* Increased line-height to prevent overlapping */
+  display: flex;
+  justify-content: center;
 }
 
 body {
   height: 80vh; /* Fills the entire viewport height */
   width: 80vw; /* 8.5 inches converted to vw (assuming 100vw = screen width) */
   margin: 0 auto; /* Centers content horizontally */
+  display: flex;
   text-align: center; /* Centers all text by default */
+  justify-content: center;
   max-width: 800px;
 }
 
@@ -46,6 +50,8 @@ h2 {
   font-size: larger;
   justify-content: left; /* Intentional left alignment */
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {
