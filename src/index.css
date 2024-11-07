@@ -64,13 +64,13 @@ h2 {
 @media print {
   @page {
     size: A4;
-    width: 100vw;
+    width: 90vw;
     margin: 0;
   }
   body {
     justify-content: center;
-    height: 10.5in;
-    width: 8in;
+    height: 10in;
+    width: 7in;
     margin: 0; /* Remove margins for better space utilization */
   }
 }
