@@ -25,7 +25,7 @@ function LotLabel() {
         <h3>
           Lot ID: <i>{lotId}</i>
         </h3>
-        <QRCode size={512} value={lotId} level={"H"} />
+        <QRCode size={400} value={lotId} level={"H"} />
       </div>
       {jobId && (
         <div className="job-info">
