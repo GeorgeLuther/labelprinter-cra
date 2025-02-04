@@ -10,7 +10,7 @@ function LotLabel() {
   for (const [key, value] of searchParams.entries()) {
     allParams[key] = value;
   }
-  const { lotId, sku, jobName, jobId, release, kit } = allParams;
+  const { lotId, sku, component, jobName, jobId, release, kit } = allParams;
 
   useEffect(() => {
     window.print();
@@ -21,6 +21,7 @@ function LotLabel() {
       <div className="lot-info">
         <p>BMP SKU:</p>
         <h1>{sku}</h1>
+        <h2>{component}</h2>
         <h3>
           Lot ID: <i>{lotId}</i>
         </h3>
