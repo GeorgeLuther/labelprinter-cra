@@ -20,8 +20,8 @@ function LotLabel() {
     <div className="label">
       <div className="lot-info">
         <p>BMP SKU:</p>
-        <p>Component:</p> <h1>{sku}</h1>
-        <h2>{component}</h2>
+        <h1>{sku}</h1>
+        <p>Component:</p> <h2>{component}</h2>
         <h3>
           Lot ID: <i>{lotId}</i>
         </h3>
