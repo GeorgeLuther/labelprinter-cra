@@ -21,7 +21,7 @@ function LotLabel() {
       <div className="lot-info">
         <p>BMP SKU:</p>
         <h1>{sku}</h1>
-        <p>Component:</p> <h2><i>{component}</i></h2>
+        <h2><i>{component}</i></h2>
         <h3>
           Lot ID: <i>{lotId}</i>
         </h3>
