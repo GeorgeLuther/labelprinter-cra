@@ -6,75 +6,77 @@
 }
 
 body {
-  /* Use explicit units for print layout */
-  width: 6.5in; /* Standard paper width */
-  min-height: 9.5in; /* Ensure enough height for content */
-  margin: 0 auto; /* Center on the page */
+  /* Use percentages or auto for height in screen styles */
+  width: 75vw;
+  min-height: 75vh; /* Or adjust as needed for screen */
+  margin: auto;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Default text alignment */
-  max-width: none; /* Remove max-width for printing */
-  padding: 0.5in; /* Add some padding around the content for print */
-  box-sizing: border-box; /* Include padding in width and height */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 768px;
+  padding: 20px; /* Add some padding for screen view */
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 2.5em; /* Adjust font size for print */
+  font-size: 2.5em;
   line-height: 1.1;
   text-align: center;
   font-weight: bolder;
-  margin-bottom: 0.1in; /* Add some spacing below */
+  margin-bottom: 0.1in;
 }
 .asset-number {
-  font-size: 3em; /* Adjust font size for print */
+  font-size: 3em;
   margin-bottom: 0.1in;
 }
 h2 {
-  font-size: 1.8em; /* Adjust font size for print */
+  font-size: 1.8em;
   margin-bottom: 0.1in;
 }
 
 .label {
-  width: 100%; /* Take full width within body */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 0.2in; /* Spacing between sections */
+  margin-bottom: 0.2in;
 }
 .bold-txt {
-  font-size: 1.5em; /* Adjust font size for print */
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.05in;
 }
 .kit-info {
-  line-height: 1.1; /* Adjust line height for readability */
+  line-height: 1.1;
   text-align: center;
   margin-bottom: 0.1in;
 }
 .job-info {
-  width: 100%; /* Take full width within body */
+  width: 100%;
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
+  align-items: flex-start;
   line-height: 1.1;
-  font-size: 1em; /* Adjust font size for print */
+  font-size: 1em;
 }
 
 .job-info p {
-  margin-bottom: 0.05in; /* Spacing between job info lines */
-  word-wrap: break-word; /* Ensure long words wrap */
+  margin-bottom: 0.05in;
+  word-wrap: break-word;
 }
 
 .part-name {
-  word-wrap: break-word; /* Ensure long part names wrap */
+  word-wrap: break-word;
 }
 
 @media print {
   body {
     width: 6.5in;
-    min-height: 9.5in;
+    /* Remove fixed height/min-height for print */
+    min-height: auto;
+    height: auto;
     margin: 0;
     padding: 0.5in;
     display: flex;
@@ -131,16 +133,23 @@ h2 {
   }
 
   .qr-code {
-    width: 2in; /* Adjust QR code size for print */
+    width: 2in;
     height: 2in;
     margin: 0.1in auto;
   }
 
-  /* Prevent page breaks within logical groups */
   .label,
   .qr-code,
   .job-info {
     page-break-inside: avoid;
-    margin-bottom: 0.3in; /* Add more spacing between sections for print */
+    margin-bottom: 0.3in;
+  }
+
+  /* Force a single page print */
+  html, body {
+    height: auto !important; /* Override any fixed heights */
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important; /* Allow content to take its natural height */
   }
 }
