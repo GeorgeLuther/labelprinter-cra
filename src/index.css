@@ -1,110 +1,146 @@
 :root {
   /* Other styles... */
   font-family: Jost, Inter, system-ui, J, Helvetica, Arial, sans-serif;
-  /* Increased line-height to prevent overlapping */
   display: flex;
   justify-content: center;
 }
 
 body {
-  height: 75vh; /* Fills the entire viewport height */
-  width: 75vw; /* 8.5 inches converted to vw (assuming 100vw = screen width) */
-  margin: auto; /* Centers content  */
+  /* Use explicit units for print layout */
+  width: 6.5in; /* Standard paper width */
+  min-height: 9.5in; /* Ensure enough height for content */
+  margin: 0 auto; /* Center on the page */
   display: flex;
-  text-align: center; /* Centers all text by default */
-  justify-content: center;
-  max-width: 768px;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Default text alignment */
+  max-width: none; /* Remove max-width for printing */
+  padding: 0.5in; /* Add some padding around the content for print */
+  box-sizing: border-box; /* Include padding in width and height */
 }
 
 h1 {
-  font-size: 3.6em;
-  line-height: 1.2; /* Adjust as needed for spacing */
+  font-size: 2.5em; /* Adjust font size for print */
+  line-height: 1.1;
   text-align: center;
   font-weight: bolder;
+  margin-bottom: 0.1in; /* Add some spacing below */
 }
 .asset-number {
-  font-size: 4.2em;
+  font-size: 3em; /* Adjust font size for print */
+  margin-bottom: 0.1in;
 }
 h2 {
-  font-size: 2.8em;
+  font-size: 1.8em; /* Adjust font size for print */
+  margin-bottom: 0.1in;
 }
 
 .label {
-  text-align: center; /* Center text within .label */
-
-  /* Adjust width or use flexbox for internal content centering (if needed) */
-  /* width: 77vw;  */ /* Uncomment if needed */
+  width: 100%; /* Take full width within body */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.2in; /* Spacing between sections */
 }
 .bold-txt {
-  font-size: 2em;
+  font-size: 1.5em; /* Adjust font size for print */
   font-weight: bold;
+  margin-bottom: 0.05in;
 }
 .kit-info {
-  line-height: 0.05em;
-  justify-content: center;
+  line-height: 1.1; /* Adjust line height for readability */
   text-align: center;
+  margin-bottom: 0.1in;
 }
 .job-info {
-  padding-left: 15%;
-  line-height: 0.5em;
-  font-size: larger;
-  justify-content: left; /* Intentional left alignment */
+  width: 100%; /* Take full width within body */
   text-align: left;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  line-height: 1.1;
+  font-size: 1em; /* Adjust font size for print */
+}
+
+.job-info p {
+  margin-bottom: 0.05in; /* Spacing between job info lines */
+  word-wrap: break-word; /* Ensure long words wrap */
+}
+
+.part-name {
+  word-wrap: break-word; /* Ensure long part names wrap */
 }
 
 @media print {
-  @page {
-    size: A4 portrait;
-    margin: 0;
-  }
-
-  body, .label {
+  body {
     width: 6.5in;
-    height: 9.5in;
+    min-height: 9.5in;
+    margin: 0;
+    padding: 0.5in;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent content from flowing onto a second page */
+    box-sizing: border-box;
   }
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.1;
+    margin-bottom: 0.1in;
+  }
+  .asset-number {
+    font-size: 3em;
+    margin-bottom: 0.1in;
+  }
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.1in;
+  }
+
   .label {
-    margin-top: 5vh; /* Adjust based on your layout */
-  }
-  h1, h2, h3, p {
-    margin: 0;
-    padding: 0.05in 0;
-  }
-
-  .qr-code {
-    width: 2.2in; /* Slightly smaller to save space */
-    height: 2.2in;
-    margin: 0.1in auto 0;
-  }
-
-  .job-info {
-    font-size: 1.2em;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    align-items: center;
+    margin-bottom: 0.2in;
+  }
+  .bold-txt {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.05in;
+  }
+  .kit-info {
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 0.1in;
+  }
+  .job-info {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.1;
+    font-size: 1em;
   }
 
   .job-info p {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0.05in;
+    word-wrap: break-word;
   }
 
-  /* Prevent page breaks */
-  .label, .qr-code, .job-info {
+  .qr-code {
+    width: 2in; /* Adjust QR code size for print */
+    height: 2in;
+    margin: 0.1in auto;
+  }
+
+  /* Prevent page breaks within logical groups */
+  .label,
+  .qr-code,
+  .job-info {
     page-break-inside: avoid;
+    margin-bottom: 0.3in; /* Add more spacing between sections for print */
   }
 }
-
