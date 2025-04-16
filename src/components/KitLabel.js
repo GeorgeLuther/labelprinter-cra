@@ -23,8 +23,7 @@ function KitLabel() {
         <h1>{kitName}</h1>
         <p>Job Name:</p>
         <p className="bold-txt">{jobName}</p>
-        <p>For:</p>
-        <p className="bold-txt">{alert}</p>
+        <p className="bold-txt">For: {alert}</p>
         <br></br>
          <QRCode size={300} value={lotId} level={"H"} />
       </div>
