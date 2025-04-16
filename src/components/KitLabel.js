@@ -26,7 +26,7 @@ function KitLabel() {
         <p>For:</p>
         <p className="bold-txt">{alert}</p>
         <br></br>
-         <QRCode size={400} value={lotId} level={"H"} />
+         <QRCode size={300} value={lotId} level={"H"} />
       </div>
       {jobName && (
         <div className="job-info">
