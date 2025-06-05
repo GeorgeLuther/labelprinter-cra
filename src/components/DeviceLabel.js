@@ -19,13 +19,13 @@ function DeviceLabel() {
   return (
     <div className="label">
       <div className="lot-info">
-        <h1 className="asset-number">{assetNumber}</h1>
+        <h1 className="asset-number" font-size="5em">{assetNumber}</h1>
         <h3>
           Lot ID: <i>{lotId}</i>
         </h3>
         <QRCode size={512} value={lotId} level={"H"} />
       </div>
-      <h2 font-size="2.6em">{sku}</h2>
+      <h2 className="device-sku" font-size="3.5em">{sku}</h2>
     </div>
   );
 }
