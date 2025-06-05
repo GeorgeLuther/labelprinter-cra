@@ -27,14 +27,16 @@ h1 {
   margin-bottom: 0.1in;
 }
 .asset-number {
-  font-size: 3em;
+  font-size: 5em;
   margin-bottom: 0.1in;
 }
 h2 {
   font-size: 1.8em;
   margin-bottom: 0.1in;
 }
-
+.device-sku {
+  font-size: 3.5em;
+}
 .label {
   width: 100%;
   display: flex;
