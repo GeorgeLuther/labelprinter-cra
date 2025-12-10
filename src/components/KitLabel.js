@@ -20,9 +20,9 @@ function KitLabel() {
     <div className="label">
       <div className="kit-info">
         <p>Kit:</p>
-        <h1 style={{ fontSize: "2.8em" }}>>{kitName}</h1>
+        <h1 style={{ fontSize: "3em" }}>{kitName}</h1>
         <p>Job Name:</p>
-        <p className="bold-txt" style={{ fontSize: "1.8em" }}>{jobName}</p>
+        <p className="bold-txt" style={{ fontSize: "2em" }}>{jobName}</p>
         <p className="bold-txt">For: {alert}</p>
         <br></br>
          <QRCode size={400} value={kitId} level={"H"} />
